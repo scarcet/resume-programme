@@ -15,8 +15,9 @@ html {
 
 body {
   margin: 0;
-  background: #000;
+  background-color: #d9d9d9;
   font-family: Nunito, sans-serif;
+  color: grey;
 }
 
 /* --- Navigation Menu ------------------------------ */
@@ -191,7 +192,7 @@ nav li:nth-of-type(5) {
 .bar3 {
   width: 35px;
   height: 2px;
-  background-color: #fff;
+  background-color: #151111;
   margin: 8px 0;
   transition: 0.4s;
 }
@@ -213,52 +214,6 @@ nav li:nth-of-type(5) {
 
 /* --- Sections ------------------------------------ */
 
-section {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--primaryColor);
-}
-
-section#home {
-  background-image: url("https://images.unsplash.com/photo-1581453904507-626ddb717f14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80");
-  background-size: cover;
-  background-position: center center;
-}
-
-section#home a {
-  position: absolute;
-  z-index: 2;
-  top: 1.5rem;
-  left: 1.5rem;
-  text-decoration: none;
-  font-size: 0.8rem;
-  padding-bottom: 5px;
-  color: var(--primaryColor);
-  border-bottom: 1px solid var(--primaryColor);
-}
-
-section#about {
-  background-color: var(--navColor2);
-}
-
-section#skills {
-  background-color: var(--navColor3);
-}
-
-section#projects {
-  background-color: var(--navColor4);
-}
-
-section#contact {
-  background-color: var(--navColor5);
-}
-
 /* Media Query: Large Smartphone (Vertical) */
 @media (max-width: 600px) {
   section#home a {
@@ -270,4 +225,131 @@ section#contact {
     top: 0.5rem;
     right: 1rem;
   }
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  gap: 20px;
+  padding: 25px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* text-align: center; */
+  padding: 20px;
+  box-shadow: 3px 2px 20px 1px grey;
+}
+
+h5{
+  font-size: 20px;
+}
+
+.item1 {
+  grid-row: 1 / 4;
+}
+
+.cover-photo {
+  position: relative;
+  background-color: #d9d9d9;
+}
+
+.cover-photo img { 
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+}
+
+.thevenus img{
+  width: 31%;
+  height: auto;
+  object-fit: contain;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+  color: black;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* .personal-info > p{
+  font-size: 17px;
+} */
+
+/* Progress bar */
+.progress-bar-grey{
+  width: 100%;
+  height: 21px;
+  background-color: #d9d9d9;;
+  border-radius: 15px;
+}
+
+.progress-bar-green{
+  width: 99%;
+  height: 21px;
+  background-color:#3399ff ;
+  border-radius: 15px;
+}
+.progress-bar-green > p{
+  text-align: center; 
+  font-size:17px; 
+  color: white;
+}
+
+.item1-nest{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 20px;
+  padding: 15px;
+  justify-content: center;
+}
+
+h1 > i{
+  color: #3399ff; 
+  padding-right: 10px;
+}
+p > button{
+  background-color: #3399ff; 
+  color: aliceblue; 
+  border: none; 
+  border-radius: 4px; 
+  font-size: 18px;
+}
+h5 > i{
+  padding-right: 10px;
+  color: #3399ff;
+}
+p{
+  text-align:justify;
+}
+p > i{
+  padding-right: 10px;
+  color: #3399ff;
+}
+.date{
+  font-size: 15px;
+  color: #3399ff;
+}
+
+.footer{
+  background-color: #3399ff;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.footer p{
+  text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  .item1 { grid-area: 1 / span 2 ; }
+  .item2 { grid-area: 2 / span 2 ; }
+  .item3 { grid-area: 3 / span 2 ; }
+  .item4 { grid-area: 4 / span 2 ; }
 }
