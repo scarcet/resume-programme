@@ -185,6 +185,7 @@ nav li:nth-of-type(5) {
   z-index: 10;
   display: inline;
   cursor: pointer;
+  display: none;
 }
 
 .bar1,
@@ -231,6 +232,22 @@ nav li:nth-of-type(5) {
   grid-template-columns: 35% 65%;
   gap: 8px;
   padding: 15px;
+}
+/* Nav Menu for destop */
+.desktop_nav{
+  display: grid;
+  background-color: #3399ff;
+  height: 55px;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.desktop_nav a{
+  color: #fff;
+  text-decoration: none;
+  padding-left: 20px;
 }
 
 .grid-container > div {
@@ -352,4 +369,6 @@ p > i{
   .item2 { grid-area: 2 / span 2 ; }
   .item3 { grid-area: 3 / span 2 ; }
   .item4 { grid-area: 4 / span 2 ; }
+  .menu-bars{display: block;}
+  .desktop_nav{display: none;}
 }
